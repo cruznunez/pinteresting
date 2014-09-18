@@ -1,9 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Lobster);
 
 $body-bg:					#026411;
-$font-family: 'Lobster', cursive;
+$font-family-sans-serif:	'Lobster';
 $navbar-inverse-bg: 		#222222;
 $navbar-inverse-link-color: #FEFEFE;
-$brand-primary: 			#415E99;
+$brand-primary: 			#C40507;
 $jumbotron-bg: 				#FFFFFF;
 @import 'bootstrap';
+
+.center {
+	text-align: center;
+}
+
+.navbar-brand {
+	font-weight: bold;
+}
