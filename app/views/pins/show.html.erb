@@ -19,11 +19,6 @@
       <div class="panel-body">
         <p><%= @pin.description %></p>
         <p><strong><%= @pin.user.email if @pin.user %></strong></p>
-
-        <% if @pin.user == current_user %>
-         <%= link_to 'Edit', edit_pin_path(@pin) %>
-        <% end %>
-
       </div>
     </div>
   </div>
@@ -31,8 +26,12 @@
 
 <p>
 	<% if @pin.user == current_user %>
-	  <%= link_to 'Edit', edit_pin_path(@pin) %>
+    <%= link_to edit_pin_path(@pin) do %>
+      <span class="glyphicon glyphicon-edit"></span>Edit
+    <% end %>
 	<% end %>
 
-	<%= link_to 'Back', pins_path %>
+  <%= link_to pins_path do %>
+      <span class="glyphicon glyphicon-arrow-left"></span>Back
+  <% end %>
 </p>
