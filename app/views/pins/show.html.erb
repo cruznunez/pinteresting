@@ -3,7 +3,7 @@
 </p>
 
 <p>
-	<% if @pin.user == current_user %>
+	<% if current_user && @pin.user == current_user %>
 	  <%= link_to 'Edit', edit_pin_path(@pin) %>
 	<% end %>
 
@@ -14,10 +14,10 @@
   <div class="col-md-offset-2 col-md-8">
     <div class="panel panel-default">
       <div class="panel-heading center">
-        <%= image_tag @pin.image.url %>
+        <img style="max-width:100%;height:auto;" href=raw<%=image_tag@pin.image.url%>
       </div>
       <div class="panel-body">
-        <p><b><%= @pin.description %></b></p>
+        <p><%= @pin.description %></p>
         <p><strong><%= @pin.user.name if @pin.user %></strong></p>
       </div>
     </div>
@@ -25,7 +25,7 @@
 </div>
 
 <p>
-	<% if @pin.user == current_user %>
+	<% if current_user && @pin.user == current_user %>
     <%= link_to edit_pin_path(@pin) do %>
       <span class="glyphicon glyphicon-edit"></span>Edit
     <% end %>
