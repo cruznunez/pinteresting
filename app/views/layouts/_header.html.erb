@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="height: 43px;">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="height: 43px; padding-left: 48px; padding-right: 55px;">
   <div class="container-fluid">
     <div class="container-fluid">
 
@@ -18,21 +18,18 @@
       
 
         <ul class="nav navbar-nav navbar-right" style="padding-top:13px;" >
-
-          <li>
-            <%#method 1 to add a glyphicon %>
-            <a href="/" style="display: block;">
-              <span class="glyphicon glyphicon-home"></span>Home
-            </a>
-          </li>
+          <%#method 1 to add a glyphicon %>
+            <li>
+              <%= link_to raw('<span class="glyphicon glyphicon-home"></span> Home'), root_path %>
+            </li>
 
           <% if user_signed_in? %>
             <%#method 2 to add a glyphicon %>
-            <li>
-              <%= link_to new_pin_path do %>
-                <span class="glyphicon glyphicon-plus"></span> New Pin
-              <% end %>
-            </li>
+              <li>
+                <%= link_to new_pin_path do %>
+                  <span class="glyphicon glyphicon-plus"></span> New Pin
+                <% end %>
+              </li>
 
           <% else %>
               <li><%= link_to "Sign Up", new_user_registration_path %></li>
@@ -40,15 +37,28 @@
           <% end %>
 
           <li class="dropdown"> <%#necessary for dropdown%>
-            <a href="#" <%#makes cursor turn into index hand%> class="dropdown-toggle" data-toggle="dropdown">
+            <a href="#" <%#turns default cursor into "pointing hand" cursor when hovering over link%> 
+                                                        class="dropdown-toggle" data-toggle="dropdown">
               <span class="caret"></span></a> <%#necessary for dropdown%>
-              <ul class="dropdown-menu" role="menu"> <%#necessary for dropdown %>
-                  <li><%= link_to "About Us", about_path %></li>
+              <ul class="dropdown-menu" role="menu" style="position:fixed;top:42px;right:70px;"> <%#necessary for dropdown %>
+                  <li>
+                    <%= link_to about_path do %>
+                      <span class="glyphicon glyphicon-question-sign"></span> About Us
+                    <%end%>
+                  </li>
                 <% if user_signed_in? %>
                   <li class="divider"></li>
-                  <li><%= link_to "Account Settings", edit_user_registration_path %></li>
+                  <li>
+                    <%= link_to edit_user_registration_path do %>
+                      <span class="glyphicon glyphicon-cog"></span>Account Settings
+                    <% end %>
+                  </li>
                   <li class="divider"></li>
-                  <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+                  <li>
+                    <%= link_to destroy_user_session_path, method: :delete do %>
+                      <span class="glyphicon glyphicon-log-out"></span> Log Out
+                    <%end%>
+                  </li>
                 <% end %>
               </ul>
           </li>
