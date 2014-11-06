@@ -17,8 +17,16 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
       
 
-        <ul class="nav navbar-nav navbar-right" style="padding-top:13px;" >
+        <ul class="nav navbar-nav navbar-right" style="padding-top:13px;" <%#hover="background-color: red;"%>>
           <%#method 1 to add a glyphicon %>
+            
+            <%#li>
+              <a class="home" href="/">
+                <span class="glyphicon glyphicon-home"></span>
+                Home
+              </a>
+            </li%>
+
             <li>
               <%= link_to raw('<span class="glyphicon glyphicon-home"></span> Home'), root_path %>
             </li>
