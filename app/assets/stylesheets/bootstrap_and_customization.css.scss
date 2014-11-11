@@ -10,7 +10,8 @@ $navbar-inverse-bg: 		#222222;
 $navbar-inverse-link-color: #FEFEFE;
 $brand-black: 				#C40507;
 $jumbotron-bg: 				#FFFFFF;
-$btn-primary-bg:				red;
+$btn-primary-bg:			#CE0101;
+$link-color:				#CE0101;
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
@@ -28,6 +29,6 @@ $btn-primary-bg:				red;
 
 .home:hover, .home:active {background-color: #353334;}
 
-.btn-primary.about {background-color: red;}
+.btn-primary.about {background-color: #CE0101;}
 
 .btn-primary.about {font-size: 20px; padding-left: 5px; padding-right: 5px; padding-top: 0px; padding-bottom: 2px;}
