@@ -1,16 +1,6 @@
-<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-	<div class="container-fluid">
-		<div class="container-fluid">
-			<div class="container-fluid">
-				<div class="container-fluid" >
-									<% #this u1 class="nav navbar-nav navbar-right" is what makes the links (<li>) white %>
-					<ul class="nav navbar-nav">
-						<li style="font-size:10px;"><%= link_to "About Pinteresting", about_path %></li>
-						<li style="font-size:10px;"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation" style="text-align:center;">
+		<ul class="nav navbar-nav" style="display:inline-block;float:none;">
+			<li style="font-size:10px;"><%= link_to "About Pinteresting", about_path %></li>
+			<li style="font-size:10px;"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+		</ul>
 </nav>
-</body>

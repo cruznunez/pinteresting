@@ -16,16 +16,24 @@ $link-color:				#CE0101;
 @import 'bootstrap';
 
 .center {
-	text-align: center; vertical-align: center;
+	text-align: center;
+	vertical-align: center;
 }
 
 .navbar-brand {
 	font-weight: bold;
 }
 
-.navbar-nav li a {line-height: 16px; height: 18px; padding-top:0px ; padding-bottom:0px;}
+.navbar-nav li a {line-height: 16px;
+	height: 18px;
+	padding-top:0px;
+	padding-bottom:0px;}
 
-.navbar {min-height:16px; padding-top:0px; padding-bottom:0px}
+.navbar {
+	min-height:16px;
+	padding-top:0px;
+	padding-bottom:0px;
+}
 
 .home:hover, .home:active {background-color: #353334;}
 

@@ -1,11 +1,11 @@
 class PagesController < ApplicationController
-	
+
   def home
   end
 
   def about
   end
 
-  def susi
+  def whoa
   end
 end
