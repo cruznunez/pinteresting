@@ -14,7 +14,9 @@ $btn-primary-bg:			#CE0101;
 $link-color:				#CE0101;
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-
+body {
+	padding-bottom: 5%;
+}
 .center {
 	text-align: center;
 	vertical-align: center;
