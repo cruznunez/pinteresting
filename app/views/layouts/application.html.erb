@@ -2,9 +2,7 @@
 
 <html>
 	<head>
-		<% #logo %>
-		<link rel="icon" href="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/v/t1.0-1/p50x50/10447705_10203696767653444_5415251121519973337_n.jpg?oh=89e24ee49d67561b5bb520ac633c694b&oe=54F346B8&__gda__=1420744147_1e2a34a066e6623d5387efc63a019745">
-
+		<%= favicon_link_tag 'logo.png' %>
 		<style>
 			p.ex {color: #026411;}
 			a.one:link {color:#026420;text-decoration:none; padding: 0px;}
@@ -20,7 +18,7 @@
 	  <%= csrf_meta_tags %>
 	</head>
 
-	<body style="padding-top:55px; padding-bottom:0px; padding-right: 50px; padding-left: 50px;">
+	<body>
 
 		<%= render 'layouts/header' %>
 
